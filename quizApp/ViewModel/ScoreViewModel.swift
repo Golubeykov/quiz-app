@@ -16,3 +16,4 @@ struct ScoreViewModel {
         100 * (correctGuesses)/(correctGuesses + incorrectGuesses)
     }
 }
+
