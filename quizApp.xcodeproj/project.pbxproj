@@ -17,6 +17,8 @@
 		3AD2B51A2829949000EA123D /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD2B5192829949000EA123D /* WelcomeView.swift */; };
 		3AD2B51C2829978400EA123D /* GameColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD2B51B2829978400EA123D /* GameColor.swift */; };
 		3AD2B51E282998E600EA123D /* BottomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD2B51D282998E600EA123D /* BottomTextView.swift */; };
+		3AD2B52028299A9000EA123D /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD2B51F28299A9000EA123D /* GameViewModel.swift */; };
+		3AD2B52228299DC200EA123D /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD2B52128299DC200EA123D /* QuestionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		3AD2B5192829949000EA123D /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		3AD2B51B2829978400EA123D /* GameColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameColor.swift; sourceTree = "<group>"; };
 		3AD2B51D282998E600EA123D /* BottomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTextView.swift; sourceTree = "<group>"; };
+		3AD2B51F28299A9000EA123D /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		3AD2B52128299DC200EA123D /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 				3AD2B50428291A6F00EA123D /* GameView.swift */,
 				3AD2B5192829949000EA123D /* WelcomeView.swift */,
 				3AD2B51D282998E600EA123D /* BottomTextView.swift */,
+				3AD2B52128299DC200EA123D /* QuestionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -95,6 +100,7 @@
 		3AD2B51528298BC000EA123D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				3AD2B51F28299A9000EA123D /* GameViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -179,6 +185,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AD2B52228299DC200EA123D /* QuestionView.swift in Sources */,
+				3AD2B52028299A9000EA123D /* GameViewModel.swift in Sources */,
 				3AD2B51828298C0200EA123D /* GameModel.swift in Sources */,
 				3AD2B51A2829949000EA123D /* WelcomeView.swift in Sources */,
 				3AD2B5112829839200EA123D /* Question.swift in Sources */,

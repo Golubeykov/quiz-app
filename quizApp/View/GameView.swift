@@ -8,37 +8,24 @@
 import SwiftUI
 
 struct GameView: View {
-    let question = Question(questionText: "В каком году написано это приложение?", possibleAnswers: ["2019","2020","2021","2022"], correctAnswerIndex: 3)
-    @State var mainColor = Color(red: 20/255, green: 28/255, blue: 58/255)
+
+    @StateObject var viewModel = GameViewModel()
     
     var body: some View {
         ZStack {
-            mainColor.ignoresSafeArea()
+            GameColor.main.ignoresSafeArea()
             VStack {
-                Text("1/10")
+                Text(viewModel.questionProgressText)
                     .font(.callout)
                     .multilineTextAlignment(.center)
                     .padding()
                 Spacer()
-                Text(question.questionText)
-                    .font(.largeTitle)
-                    .bold()
-                    .multilineTextAlignment(.center)
-                    .padding()
-                Spacer()
-                HStack {
-                    ForEach(question.possibleAnswers.indices, id: \.self) { index in
-                    Button(action: {
-                        print(question.possibleAnswers[index])
-                        mainColor = index == question.correctAnswerIndex ? .green : .red
-                    }, label: {
-                        ChoiceTextView(choiceText: question.possibleAnswers[index])
-                    })
-                    }
-            }
+                QuestionView(question: viewModel.currentQuestion)
         }
     }
-        .foregroundColor(.white)
+    .foregroundColor(.white)
+    .navigationBarHidden(true)
+    .environmentObject(viewModel)
 }
 }
 
