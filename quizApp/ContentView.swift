@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     let question = Question(questionText: "В каком году написано это приложение?", possibleAnswers: ["2019","2020","2021","2022"], correctAnswerIndex: 3)
-    let mainColor = Color(red: 20/255, green: 28/255, blue: 58/255)
+    @State var mainColor = Color(red: 20/255, green: 28/255, blue: 58/255)
     let accentColor = Color(red: 48/255, green: 105/255, blue: 240/255)
     
     var body: some View {
@@ -27,26 +27,14 @@ struct ContentView: View {
                     .multilineTextAlignment(.center)
                 Spacer()
                 HStack {
+                    ForEach(question.possibleAnswers.indices, id: \.self) { index in
                     Button(action: {
-                        print(question.possibleAnswers[0])
+                        print(question.possibleAnswers[index])
+                        mainColor = index == question.correctAnswerIndex ? .green : .red
                     }, label: {
-                        ChoiceTextView(choiceText: question.possibleAnswers[0])
+                        ChoiceTextView(choiceText: question.possibleAnswers[index])
                     })
-                    Button(action: {
-                        print(question.possibleAnswers[1])
-                    }, label: {
-                        ChoiceTextView(choiceText: question.possibleAnswers[1])
-                    })
-                    Button(action: {
-                        print(question.possibleAnswers[2])
-                    }, label: {
-                        ChoiceTextView(choiceText: question.possibleAnswers[2])
-                    })
-                    Button(action: {
-                        print(question.possibleAnswers[3])
-                    }, label: {
-                        ChoiceTextView(choiceText: question.possibleAnswers[3])
-                    })
+                    }
             }
         }
     }
