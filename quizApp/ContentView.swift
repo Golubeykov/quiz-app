@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    let question = Question(questionText: "В каком году написано это приложение?", possibleAnswers: ["2019","2020","2021","2022"], correctAnswerIndex: 3)
     let mainColor = Color(red: 20/255, green: 28/255, blue: 58/255)
     let accentColor = Color(red: 48/255, green: 105/255, blue: 240/255)
     
@@ -20,51 +21,31 @@ struct ContentView: View {
                     .multilineTextAlignment(.center)
                     .padding()
                 Spacer()
-                Text("В каком году написано это приложение?")
+                Text(question.questionText)
                     .font(.largeTitle)
                     .bold()
                     .multilineTextAlignment(.center)
                 Spacer()
                 HStack {
                     Button(action: {
-                        print("Вариант 1")
+                        print(question.possibleAnswers[0])
                     }, label: {
-                        Text("2019")
-                            .font(.body)
-                            .bold()
-                            .multilineTextAlignment(.leading)
-                            .padding()
-                            .border(accentColor, width: 4)
+                        ChoiceTextView(choiceText: question.possibleAnswers[0])
                     })
                     Button(action: {
-                        print("Вариант 2")
+                        print(question.possibleAnswers[1])
                     }, label: {
-                        Text("2020")
-                            .font(.body)
-                            .bold()
-                            .multilineTextAlignment(.leading)
-                            .padding()
-                            .border(accentColor, width: 4)
+                        ChoiceTextView(choiceText: question.possibleAnswers[1])
                     })
                     Button(action: {
-                        print("Вариант 3")
+                        print(question.possibleAnswers[2])
                     }, label: {
-                        Text("2021")
-                            .font(.body)
-                            .bold()
-                            .multilineTextAlignment(.leading)
-                            .padding()
-                            .border(accentColor, width: 4)
+                        ChoiceTextView(choiceText: question.possibleAnswers[2])
                     })
                     Button(action: {
-                        print("Вариант 4")
+                        print(question.possibleAnswers[3])
                     }, label: {
-                        Text("2022")
-                            .font(.body)
-                            .bold()
-                            .multilineTextAlignment(.leading)
-                            .padding()
-                            .border(accentColor, width: 4)
+                        ChoiceTextView(choiceText: question.possibleAnswers[3])
                     })
             }
         }
