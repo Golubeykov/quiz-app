@@ -17,12 +17,7 @@ struct WelcomeView: View {
                     Spacer()
                     Text("Проверь свои знания истории 🧐")
                         .font(.largeTitle)
-                        .bold()
-                        .multilineTextAlignment(.center)
-                        .padding()
-                    Spacer()
-                    Spacer()
-                    NavigationLink(destination: GameView(), label: {
+                        .bold(destination: GameView(), label: {
                         BottomTextView(str: "Поехали!")
                     })
                 }
